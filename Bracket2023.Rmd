@@ -1,9 +1,15 @@
 ---
-title: "Bracket"
-author: "Alex Connolly"
-date: "3/15/2023"
+title: "Bracket2023"
+author: "AwesomePie1453"
+date: '2024-03-21'
 output: html_document
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -28,10 +34,10 @@ Weighted_Probabilities <- function(PT1, team_name_1, PT2, team_name_2){Pbin = (P
 New_Variable <- print(rbinom(1, 1, prob=Pbin))
 if(New_Variable){
   print(team_name_1)
-return(c(PT1, team_name_1))
+  return(c(PT1, team_name_1))
 }else{
-    print(team_name_2)
-return(c(PT2,team_name_2))
+  print(team_name_2)
+  return(c(PT2,team_name_2))
 }}
 ```
 
@@ -196,5 +202,3 @@ W62 <- Weighted_Probabilities(as.numeric(W59[1]), W59[2], as.numeric(W60[1]), W6
 W63 <- Weighted_Probabilities(as.numeric(W61[1]), W61[2], as.numeric(W62[1]), W62[2])
 ```
 
-
-Thanks for using this bracket generator, hope you win!
